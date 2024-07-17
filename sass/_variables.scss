@@ -1,0 +1,17 @@
+// 変数（カスタムプロパティ）
+
+
+// map-get()関数で取り出し可能
+// map-get($breakpoints, md) -> 768px
+
+$breakpoints :(
+    md:768px,
+);
+
+:root {
+    --white: #fff;
+    --black: #000;
+
+    --transition: .3s ease;
+    --font-noto-sans: "Noto Sans JP";
+}

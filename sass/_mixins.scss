@@ -1,0 +1,11 @@
+// ミックスイン定義
+@use './variables' as *;
+
+// メディアクエリ用
+@mixin mq($brekpoint: medium) {
+    @if($brekpoint ==medium) {
+        @media screen and (min-width:map-get($breakpoints,md)) {
+            @content;
+        }
+    }
+}

@@ -1,0 +1,153 @@
+@use '../mixins' as *;
+
+//　メインビジュアル
+
+.latest-issue {
+    height: 100vh;
+    background: url(../img/mv-bg@2x.jpg) no-repeat center/cover;
+
+
+    .main-visual {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        height: calc(100vh - 60px);
+
+        img {
+            display: block;
+            transform: translateY(10%);
+            max-width: 100%;
+            width: min(80vh, 400px);
+        }
+
+        .info {
+            position: absolute;
+            top: 80%;
+            left: 10%;
+
+            span {
+                background-color: var(--white);
+            }
+
+
+            p {
+                background-color: var(--white);
+                font-weight: bold;
+                font-size: 1.5em;
+                margin-bottom: 10px;
+            }
+
+        }
+
+
+    }
+
+    @include mq {
+
+        .main-visual {
+            height: 100vh;
+
+
+            img {
+                transform: translateY(0%);
+                width: auto;
+                height: 80vh;
+                max-height: 700px;
+            }
+
+            .info {
+                left: 5%;
+                top: 70%;
+
+                p {
+                    font-size: 3vw;
+                    height: 40px;
+                    line-height: 40px;
+                }
+
+            }
+        }
+
+    }
+
+}
+
+.backnumber {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        padding: 10px 20px;
+        font-size: 1.2em;
+
+    }
+
+    a {
+        display: block;
+        padding: 40px 20px;
+
+        .img {
+            text-align: center;
+
+        }
+
+        .text {
+            margin-top: 20px;
+        }
+    }
+
+    img {
+        max-width: 100%;
+        width: min(100vh, 300px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    }
+
+    .issue {
+
+        &-101 {
+            background-color: #ecf4f9;
+        }
+
+        &-100 {
+            background-color: #fbf3d2;
+        }
+
+        &-99 {
+            background-color: #f9f2eb;
+        }
+
+        &-98 {
+            background-color: #fae8c2;
+        }
+
+        &-97 {
+            background-color: #e2efe7;
+        }
+
+        &-96 {
+            background-color: #f2f5fb;
+        }
+    }
+
+    @include mq {
+
+        .bacnumber-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+
+        a {
+            padding: 60px 30px;
+        }
+
+        img {
+            width: min(100vh, 250px);
+        }
+
+
+    }
+
+}

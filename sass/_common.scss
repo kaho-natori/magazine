@@ -1,0 +1,32 @@
+@use './mixins' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 14px;
+    line-height: 1.8;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Noto Sans JP', 'ヒラギノ角ゴ W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo ,sans-serif;
+    color: var(--black);
+}
+
+a{
+    text-decoration: none;
+    color: var(--black);
+}
+
+ul{
+    list-style: none;
+}
+
+main{
+    margin-left: 0px;
+    
+
+    @include mq {
+        margin-left: 200px;
+    }
+}
